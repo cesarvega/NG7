@@ -22,6 +22,20 @@ export const navigation: FuseNavigation[] = [
                 }
             },
             {
+                id       : 'users',
+                title    : 'users',
+                translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                icon     : 'email',
+                url      : '/users',
+                badge    : {
+                    title    : '25',
+                    translate: 'NAV.SAMPLE.BADGE',
+                    bg       : '#F44336',
+                    fg       : '#FFFFFF'
+                }
+            },
+            {
                 id       : 'orders',
                 title    : 'orders',
                 translate: 'NAV.SAMPLE.TITLE',

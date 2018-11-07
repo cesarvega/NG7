@@ -26,22 +26,22 @@ const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent,
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },  
   {
     path: 'change-password',
     component: ChangePasswordComponent,
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'thankyou',
     component: ThankyouComponent,
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'unsubscribe',
     component: UnsubscribeComponent,
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'faq',
@@ -49,16 +49,17 @@ const routes: Routes = [
     resolve  : {
       faq: FaqService
   },
-  // canActivate: [AuthGuard]
+  canActivate: [AuthGuard]
   },
   {
     path: 'successful-password-reset',
     component: SuccessfulPasswordResetComponent,
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'forgot-password',
-    component: ForgotPasswordComponent
+    component: ForgotPasswordComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'forgot-password-success',
