@@ -1,0 +1,1086 @@
+[{
+        "section_one": [{
+            "title": "",
+            "description": "",
+            "paragraphs": [],
+            "list": ["Creative Agency", "Creative Team", "Modern Toolx"],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg1.jpg"],
+            "icon": "",
+            "cards": [{
+                "icon": "",
+                "image": "",
+                "title": "",
+                "paragraph": "",
+                "list": [],
+                "linkSources": [],
+                "footerDescription": "",
+                "footerButtons": [{
+                    "icon": "",
+                    "description": ""
+                }]
+            }],
+            "buttons": [{
+                    "icon": "",
+                    "description": "ABOUT US"
+                },
+                {
+                    "icon": "",
+                    "description": "OUR WORK"
+                }
+            ]
+        }]
+    },
+    {
+        "section_two": [{
+            "title": "About Us",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": ["We're a Creative web design studio based in jaipur, india. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-twitter",
+                    "image": "",
+                    "title": "BOOTSTRAP 4",
+                    "paragraph": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-mobile",
+                    "image": "",
+                    "title": "MOBILE FRIENDLY",
+                    "paragraph": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-thumb-up",
+                    "image": "",
+                    "title": "MODERN DESIGN",
+                    "paragraph": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                    "icon": "",
+                    "description": ""
+                },
+                {
+                    "icon": "",
+                    "description": ""
+                }
+            ]
+        }]
+    },
+    {
+        "section_three": [{
+                "title": "10.5K",
+                "description": "Happy Customers",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": ["./assets/html/images/bg5.jpg"],
+                "icon": "ti-user",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "title": "25",
+                "description": "Live Items",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "ti-shopping-cart",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "title": "2.5K",
+                "description": "Happy Hours",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "ti-timer",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "title": "7M",
+                "description": "Travels",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "ti-truck",
+                "cards": [],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_four": [{
+            "title": "services",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-image",
+                    "image": "",
+                    "title": "WEB DESIGN",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-android",
+                    "image": "",
+                    "title": "APP DEVELOPMENT",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-briefcase",
+                    "image": "",
+                    "title": "MARKETING",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-wordpress",
+                    "image": "",
+                    "title": "WEB DEVELOPMENT",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["- 24/4 Full support", "- Free photoshop editing", "- Web hosting", "- Free customization", "- Content Creation", "- Backend development", "- Copyrighting"],
+                    "linkSources": ["Learn More"],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                    "icon": "",
+                    "description": ""
+                },
+                {
+                    "icon": "",
+                    "description": ""
+                }
+            ]
+        }]
+    },
+    {
+        "section_five": [{
+            "title": "GEMS agency specializes in the design and development of any type of website.",
+            "description": "",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg3.jpg"],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-thumb-up",
+                    "image": "",
+                    "title": "24/7 Support",
+                    "paragraph": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-twitter",
+                    "image": "",
+                    "title": "Bootstrap 4",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": "Hire Us Today"
+            }]
+        }]
+    },
+    {
+        "section_six": [{
+            "title": "OUR PRICING",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "STARTER Free",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": "Buy Now"
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "PRO $ 9.99 /M Best Value",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["24/7 Customer Support", "10 GB Storage", "10 Email Accounts", "1 Website Develop Free"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": "Buy Now"
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BUSINESS $ 29.99 /M",
+                    "paragraph": "Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+                    "list": ["24/7 Customer Support", "100 GB Storage", "Unlimited Email Accounts", "5 Website Develop Free", "Unlimited Domains", "10 GB Bandwidth"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": "Buy Now"
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_seven": [{
+            "title": "RECENT PROJECTS",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": ["THE MOST FEATURES RICH ONE PAGE TEMPLATE ON THE MARKET."],
+            "list": ["All", "Design", "App", "Development"],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "BEAUTIFUL FOLIO",
+                    "paragraph": "Lorem Ipsum",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-zoom-in",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-fullscreen",
+                            "description": ""
+                        }
+                    ]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_eight": [{
+            "title": "GEMS ARMY",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "JOHN DOE",
+                    "paragraph": "Managing Director",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "JOHN DOE",
+                    "paragraph": "Managing Director",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "JOHN DOE",
+                    "paragraph": "Managing Director",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "JOHN DOE",
+                    "paragraph": "Managing Director",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "ti-facebook",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-twitter",
+                            "description": ""
+                        },
+                        {
+                            "icon": "ti-instagram",
+                            "description": ""
+                        }
+                    ]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_nine": [{
+            "title": "HOW WE DO",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-search",
+                    "image": "",
+                    "title": "RESEARCH",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                },
+                {
+                    "icon": "ti-pencil",
+                    "image": "",
+                    "title": "PLANING",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                },
+                {
+                    "icon": "ti-settings",
+                    "image": "",
+                    "title": "DEVELOP",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                },
+                {
+                    "icon": "ti-car",
+                    "image": "",
+                    "title": "LAUNCH",
+                    "paragraph": "Vestibulum placerat, ipsum vel mollis ornare, libero ex dapibus diam, gravida tempor.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": []
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_ten": [{
+            "title": "",
+            "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
+            "paragraphs": [],
+            "list": ["DIGITAL STUDIO", "CREATIVE AGENCY", "24/7 CUSTOMER SUPPORT"],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg4.jpg"],
+            "icon": "",
+            "cards": [{
+                "icon": "",
+                "image": "",
+                "title": "",
+                "paragraph": "",
+                "list": [],
+                "linkSources": [],
+                "footerDescription": "",
+                "footerButtons": [{
+                    "icon": "",
+                    "description": ""
+                }]
+            }],
+            "buttons": [{
+                "icon": "",
+                "description": "Buy Now"
+            }]
+        }]
+    },
+    {
+        "section_eleven": [{
+            "title": "FROM JOURNAL",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "./assets/html/images/img1.jpg",
+                    "title": "Great color combination",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img2.jpg",
+                    "title": "Enjoy your free time",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img3.jpg",
+                    "title": "Beautiful watch with gems",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img2.jpg",
+                    "title": "Enjoy your free time",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/img3.jpg",
+                    "title": "Beautiful watch with gems",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "https://player.vimeo.com/video/79293746",
+                    "title": "Post with vimeo video",
+                    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Read More >",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_twelve": [{
+            "title": "CUSTOMER REVIEWS",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": ["./assets/html/images/bg2.jpg"],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "./assets/html/images/team-1.jpg",
+                    "title": "EMILY DOE",
+                    "paragraph": "'Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus.' ",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Gems customers",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/team-2.jpg",
+                    "title": "EMILY DOE",
+                    "paragraph": "'Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus.' ",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Gems customers",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/team-3.jpg",
+                    "title": "EMILY DOE",
+                    "paragraph": "'Praesent sodales, quam vitae gravida interdum, ex mi bibendum enim, sit amet tristique mi quam vel odio. Donec non nunc condimentum, hendrerit elit sed, condimentum magna. Suspendisse imperdiet purus vel ornare cursus.' ",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "Gems customers",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_thirteen": [{
+            "title": "CONTACT US",
+            "description": "libero ex dapibus diam expound the actual teachings of the great explorer of the truth",
+            "paragraphs": ["SAY HELLO!"],
+            "list": [],
+            "linkSources": [],
+            "images": ["https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWalJ2wO6j4AR4A9dNSj2ATI&key=AIzaSyAcC0a6iry-BDvy1LA4EFqlvKBGTdZELJA"],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Full Name...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Email Address...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Message...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": "Send Message"
+            }]
+        }]
+    },
+    {
+        "section_fourteen": [{
+            "title": "",
+            "description": "",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-home",
+                    "image": "",
+                    "title": "Address",
+                    "paragraph": "",
+                    "list": ["124, Munna Wali, Lorem Street", "Sydney, Australia", "302012"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-headphone",
+                    "image": "",
+                    "title": "Phone & fax",
+                    "paragraph": "",
+                    "list": ["+01 12 301 963", "+01 33 399 939"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-email",
+                    "image": "",
+                    "title": "Email & website",
+                    "paragraph": "",
+                    "list": ["support@gems.com", "www.gemsagency.new"],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_fifteen": [{
+            "title": "",
+            "description": "",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "Plan a Project",
+                    "paragraph": "Hire us",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Work with us",
+                    "paragraph": "Join the team",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_sixteen": [{
+            "title": "",
+            "description": "Copyright 2020. All Right Reserved. GEMS",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-facebook",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-twitter",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-google",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-instagram",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-dribbble",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-linkedin",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    }
+]

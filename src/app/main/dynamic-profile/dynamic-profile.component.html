@@ -1,0 +1,6 @@
+<mat-tab-group>
+  <mat-tab [label]="tab.name" *ngFor="let tab of tabConfig">
+    <dynamic-form (submitForm)="countChange($event)" (emailTaken)="emailtaken($event)" (paypal)="paypalveryfication($event)" [fields]="tab.item" (submit)="submit($event)">
+    </dynamic-form>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-content fxLayout="column" fxFlex="100">
+        <form [formGroup]="form" (submit)="onSubmit($event)">
+            <ng-container *ngFor="let field of fields;" dynamicField [field]="field" [group]="form">
+            </ng-container>
+            <br>
+            <div style=" display: flex;align-items: center;align-items: center;justify-content: center;">
+                <button mat-raised-button color="primary" type="submit">Save</button>
+            </div>
+            <mat-error style=" display: flex;align-items: center;align-items: center;justify-content: center;" 
+                       *ngIf="noValid">
+                some of the fileds are missing please check the inputs
+            </mat-error>
+        </form>
+    </mat-card-content>
+</mat-card>

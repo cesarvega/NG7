@@ -28,14 +28,6 @@ const routes = [
     TranslateModule,
 
     FuseSharedModule
-  ],
-  exports: [
-    ItemsComponent,
-    ItemsProfileComponent
-  ],
-   entryComponents: [
-    ItemsProfileComponent,
-    ItemsComponent
-]
+  ]
 })
 export class ItemsModule { }

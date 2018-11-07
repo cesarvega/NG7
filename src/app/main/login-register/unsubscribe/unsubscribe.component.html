@@ -1,0 +1,52 @@
+<div id="login" fxLayout="column">
+
+    <div id="login-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+        <div id="login-form">
+
+            <div class="logo">
+                <img src="assets/images/logos/fuse.svg">
+            </div>
+
+            <div class="mat-display-1">We are sorry to see you go! (｡◕︿◕｡)</div>
+            <form name="loginForm" [formGroup]="loginForm" novalidate>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email *</mat-label>
+                    <input matInput formControlName="emailFrom">
+                    <mat-error *ngIf="!formErrors.emailFrom.required">
+                        A valid Email is required!
+                    </mat-error>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Reason for unsubcribe *</mat-label>
+                    <mat-select placeholder="Reason for Communication" formControlName="reasonwhy">
+                        <mat-option *ngFor="let contactReason of reasons" [value]="contactReason">
+                            {{contactReason}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!formErrors.reasonwhy.required">
+                        Select a reason is required!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>if other please specify</mat-label>
+                    <textarea rows='3' cols='50' matInput placeholder="message" formControlName="Message"></textarea>
+                    <!-- <mat-error *ngIf="!formErrors.Message.required">
+                        5 characters minimum message is required!
+                    </mat-error> -->
+                </mat-form-field>
+
+                <button mat-raised-button color="accent" (click)="unsubscribe()" class="submit-button" aria-label="UNSUBSCRIBE"
+                    [disabled]="loginForm.invalid">
+                    UNSUBSCRIBE
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

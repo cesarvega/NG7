@@ -1,0 +1,495 @@
+[{
+        "section_one": [{
+            "title": "Miami Barber",
+            "description": "A classic grooming experience for the modern gentleman",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": ["./assets/html/images/barbershop/jumbotron-background.jpg"],
+            "icon": "",
+            "cards": [{
+                "icon": "",
+                "image": "",
+                "title": "",
+                "paragraph": "",
+                "list": [],
+                "linkSources": [],
+                "footerDescription": "",
+                "footerButtons": [{
+                    "icon": "",
+                    "description": ""
+                }]
+            }],
+            "buttons": [{
+                    "icon": "ti-headphone",
+                    "description": "BOOK YOUR APPOINTMENT"
+                },
+                {
+                    "icon": "",
+                    "description": ""
+                }
+            ]
+        }]
+    },
+    {
+        "section_two": [{
+            "title": "About Us",
+            "description": "Look good, feel good. At Miami Barber we take men's hair cuts and beard shaves seriously!",
+            "paragraphs": ["Miami Barber is a classic style men's barbershop located in the heart of Miami. Your satisfaction is our number one priority. Curabitur sed magna sagittis, fringilla mauris ut, dignissim lacus. Aliquam nec massa tempus, blandit justo sit amet, dictum mi. Quisque sodales nibh eu nunc consequat, at tristique ipsum viverra. Morbi fringilla felis non neque fringilla aliquam. Pellentesque odio est, commodo at tincidunt id, dignissim molestie est."],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                    "icon": "",
+                    "description": ""
+                },
+                {
+                    "icon": "",
+                    "description": ""
+                }
+            ]
+        }]
+    },
+    {
+        "section_three": [{
+                "title": "",
+                "description": "",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": ["./assets/html/images/barbershop/parallax.jpg"],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "ti-location-pin",
+                        "image": "",
+                        "title": "Convenient Location",
+                        "paragraph": "We are located in the heart of Miami, easily accesible from any area. Delivery service is also provided upon request, Lorem Ipsum bla blopli locati.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        }]
+                    },
+                    {
+                        "icon": "ti-home",
+                        "image": "",
+                        "title": "Luxury Service",
+                        "paragraph": "From start to end and beyond. We make sure you feel like a king at Miami Barber. Your satisfaction is our top priority. Ordi valdes lorem ipsum jala potachongas.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        }]
+                    },
+                    {
+                        "icon": "ti-money",
+                        "image": "",
+                        "title": "Affordable Pricing",
+                        "paragraph": "A sharp look shouldn't slice your wallet! That is why we set our prices to save you money and still look great. Nunc lorem esto sanpa cati panga toradio bon.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        }]
+                    }
+                ],
+                "buttons": [{
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_six": [{
+            "title": "Service",
+            "description": "Great cuts, done right with attention to detail. Luxury service and affordable pricing.",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "Deluxe Haircut",
+                    "paragraph": "Quisque tincidunt ipsum nibh, sit amet viverra dui rutrum ut. Suspendisse malesuada consectetur.",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "$20",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "The Combo",
+                    "paragraph": "Quisque tincidunt ipsum nibh, sit amet viverra dui rutrum ut. Suspendisse malesuada consectetur.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "$30",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "Beard Shave",
+                    "paragraph": "Quisque tincidunt ipsum nibh, sit amet viverra dui rutrum ut. Suspendisse malesuada consectetur.",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "$15",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+    {
+        "section_seven": [{
+            "title": "Gallery",
+            "description": "Real clients. Actual footage. This is our work!",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": ["./assets/html/images/barbershop/gallery-background.jpg"],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery2.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery1.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery3.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery4.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery5.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery6.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery7.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                },
+                {
+                    "icon": "",
+                    "image": "./assets/html/images/barbershop/gallery8.jpg",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [""],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                            "icon": "",
+                            "description": ""
+                        },
+                        {
+                            "icon": "",
+                            "description": ""
+                        }
+                    ]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    },
+   
+    {
+        "section_thirteen": [{
+            "title": "CONTACT US",
+            "description": "Your message is very important to us. Vivamus nec gravida tellus. Nullam ac nisi non tincidunt.",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": ["https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWalJ2wO6j4AR4A9dNSj2ATI&key=AIzaSyAcC0a6iry-BDvy1LA4EFqlvKBGTdZELJA"],
+            "icon": "",
+            "cards": [{
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Full Name...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Email Address...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "Message...",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": "Send Message"
+            }]
+        }]
+    },
+    {
+        "section_sixteen": [{
+            "title": "",
+            "description": "Copyright 2017. All Right Reserved",
+            "paragraphs": [],
+            "list": [],
+            "linkSources": [],
+            "images": [],
+            "icon": "",
+            "cards": [{
+                    "icon": "ti-facebook",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-twitter",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-google",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-instagram",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-dribbble",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                },
+                {
+                    "icon": "ti-linkedin",
+                    "image": "",
+                    "title": "",
+                    "paragraph": "",
+                    "list": [],
+                    "linkSources": [],
+                    "footerDescription": "",
+                    "footerButtons": [{
+                        "icon": "",
+                        "description": ""
+                    }]
+                }
+            ],
+            "buttons": [{
+                "icon": "",
+                "description": ""
+            }]
+        }]
+    }
+]

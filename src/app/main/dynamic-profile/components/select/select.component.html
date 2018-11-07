@@ -1,0 +1,11 @@
+<mat-form-field fxFlex="100" appearance="outline" [formGroup]="group">
+    <mat-label>{{field.label}}</mat-label>
+    <mat-select [placeholder]="field.label"  [value]="field.value" [formControlName]="field.name" [multiple]="field.componentType">
+        <mat-option *ngFor="let item of field.options" [value]="item">{{item}}</mat-option>
+    </mat-select>
+    <ng-container *ngFor="let validation of field.validations;" ngProjectAs="mat-error">
+        <mat-error *ngIf="group.get(field.name).hasError(validation.name)">{{validation.message}}</mat-error>
+    </ng-container>
+    <br>
+    <br>
+</mat-form-field>

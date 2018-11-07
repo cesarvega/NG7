@@ -1,0 +1,67 @@
+<div id="login" fxLayout="column">
+
+    <div id="login-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+        <div id="login-form">
+
+            <div class="logo">
+                <img src="assets/images/logos/fuse.svg">
+            </div>
+
+            <div class="mat-subheading-2">Hi, how can we help you?</div>
+
+            <form name="loginForm" [formGroup]="loginForm" novalidate>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="emailFrom">
+                    <mat-error *ngIf="!formErrors.emailFrom.required">
+                        A valid Email is required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="senderName">
+                    <mat-error *ngIf="!formErrors.senderName.required">
+                        4 characters minimum name is required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Reason for Communication</mat-label>
+                    <mat-select placeholder="Reason for Communication" formControlName="TypeOfInquiry">
+                        <mat-option *ngFor="let contactReason of reasons" [value]="contactReason">
+                            {{contactReason}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!formErrors.TypeOfInquiry.required">
+                        Select a reason is required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Survey Name (optional)</mat-label>
+                    <input matInput formControlName="SurveyName">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Message</mat-label>
+                    <textarea rows='3' cols='50' matInput placeholder="message" formControlName="Message"></textarea>
+                    <mat-error *ngIf="!formErrors.Message.required">
+                        5 characters minimum message is required!
+                    </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button color="accent" (click)="contactUs()" class="submit-button" aria-label="LOG IN"
+                    [disabled]="loginForm.invalid">
+                    SEND
+                </button>
+
+            </form>
+            <a class="link" [routerLink]="'/apps/login/auth/login'">go back to login?</a>
+        </div>
+
+    </div>
+
+</div>

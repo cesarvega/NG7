@@ -1,0 +1,103 @@
+@import "src/@fuse/scss/fuse";
+
+:host {
+
+    .link{
+        position: relative;
+        top: -69px;
+        z-index: 1;
+    }
+    button {
+
+        &.google,
+        &.facebook {
+            width: 100%;
+            text-transform: none;
+            color: #FFFFFF;
+            font-size: 13px;
+        }
+
+        @include media-breakpoint('xs') {
+            width: 100%;
+        }
+
+        &.google {
+            background-color: #D73D32;          
+        }
+
+        &.facebook {
+            background-color: rgb(63, 92, 154);
+        }
+    }
+    .separator {
+        font-size: 12px;
+        font-weight: 300;
+        color: #FFF;
+        }
+
+
+    .logo {
+        width: 128px;        
+        background-color: white;
+    }
+    .positioning{
+        position: relative; 
+        top: -50px;
+        min-width: 800px;
+        @include media-breakpoint-down('xs') {
+            min-width: 300px;
+        }
+    }
+    #price-tables {
+
+        .header {
+            z-index: 999999;
+            padding: 14px;
+            height: 400px;
+            min-height: 400px;
+            background: #1A237E;
+            background: linear-gradient(to right, #0E2A3B 0%, #34306B 100%);
+
+            @include media-breakpoint-down('xs') {
+                height: 250px;
+                min-height: 250px;
+            }
+
+            .hero-text {
+                margin: 128px 24px;
+                @include media-breakpoint-down('xs') {
+                    margin: 64px 24px;
+                    position: relative; 
+                    top: -45px;
+                }
+
+                .h2 {
+                    color: white;
+                    font-size: 25px;
+                    font-weight: 400;
+                    letter-spacing: 0.01em;
+                    text-align: center;
+
+                    @include media-breakpoint-down('xs') {
+                        font-size: 14px;
+                    }
+                }
+
+                .h3 {
+                    color: rgba(255, 255, 255, 0.75);
+                    max-width: 480px;
+                    text-align: center;
+                    margin-top: 20px;
+                    font-weight: 300;
+                    letter-spacing: 0.05em;
+
+                    @include media-breakpoint-down('xs') {
+                        font-size: 13px;
+                        max-width: 100%;
+                        margin-top: 0px;
+                    }
+                }
+            }     
+        }      
+    }
+}

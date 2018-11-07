@@ -1,0 +1,636 @@
+[
+    {
+        "section_one": [
+            {
+                "title": "Brand Institute",
+                "description": "MIAMI",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [
+                    "./assets/html/images/tatt/jumbotron-background1.jpg"
+                ],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ],
+                "videoSource": [
+                    "./assets/html/video/video.mp4",
+                    "./assets/html/video/21WatercolorTattoos.mp4#t=60",
+                    "./assets/html/video/28.mp4#t=5",
+                    "./assets/html/video/white.mp4#t=5",
+                    "./assets/html/video/52.mp4#t=5",
+                    "./assets/html/video/Girls.mp4#t=5"
+                ],
+                "buttons": [
+                    {
+                        "icon": "ti-headphone",
+                        "description": "NEXT VIDEO"
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_two": [
+            {
+                "title": "About Us",
+                "description": "Look good, feel good. At Miami tattoo design we take people's design and tattoes very seriously!",
+                "paragraphs": [
+                    "Miami tattoo design is located in the heart of Miami. Your satisfaction is our number one priority."
+                ],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "Tattoo Stencil Design",
+                        "paragraph": "Masters of BlackInk & Straight Lines",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "$50",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "Tattoo Stencil & Ink",
+                        "paragraph": "Masters of BlackInk & Straight Lines",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "$130",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "Tattoo Stencil, Tryout and Ink",
+                        "paragraph": "Masters of BlackInk & Straight Lines",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "$150",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_three": [
+            {
+                "title": "",
+                "description": "",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [
+                    "./assets/html/images/tatt/parallax.jpg"
+                ],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "fa fa-star",
+                        "image": "",
+                        "title": "Convenient Location",
+                        "paragraph": "We are located in the heart of Miami, easily accesible from any area. Delivery service is also provided upon request, Just send a message to book it.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-home",
+                        "image": "",
+                        "title": "Luxury Service",
+                        "paragraph": "From start to end and beyond. We make sure you feel like a king at Miami Tattoo Design. Your satisfaction is our top priority.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-money",
+                        "image": "",
+                        "title": "Affordable Pricing",
+                        "paragraph": "A sharp look shouldn't slice your wallet! That is why we set our prices to save you money and still look great. Nunc lorem esto sanpa cati panga toradio bon.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "icon": "",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_six": [
+            {
+                "title": "Service",
+                "description": "Great cuts, done right with attention to detail. Luxury service and affordable pricing.",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "Deluxe Haircut",
+                        "paragraph": "Quisque tincidunt ipsum nibh.",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "$20",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "The Combo",
+                        "paragraph": "Quisque tincidunt ipsum nibh.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "$30",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "Beard Shave",
+                        "paragraph": "Quisque tincidunt ipsum nibh.",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "$15",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_seven": [
+            {
+                "title": "Gallery",
+                "description": "Real clients. Actual footage. This is our work!",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [
+                    "./assets/html/images/tatt/gallery-background.jpg"
+                ],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery2.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery1.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery3.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery4.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery5.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery6.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery7.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "./assets/html/images/tatt/gallery8.jpg",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [
+                            ""
+                        ],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            },
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_thirteen": [
+            {
+                "title": "CONTACT US",
+                "description": "Your message is very important to us. Vivamus nec gravida tellus. Nullam ac nisi non tincidunt.",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [
+                    "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJWalJ2wO6j4AR4A9dNSj2ATI&key=AIzaSyAcC0a6iry-BDvy1LA4EFqlvKBGTdZELJA"
+                ],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "Full Name...",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "Email Address...",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "Message...",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "icon": "",
+                        "description": "Send Message"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section_sixteen": [
+            {
+                "title": "",
+                "description": "Copyright 2017. All Right Reserved",
+                "paragraphs": [],
+                "list": [],
+                "linkSources": [],
+                "images": [],
+                "icon": "",
+                "cards": [
+                    {
+                        "icon": "fa fa-facebook",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-twitter",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-google",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-instagram",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-dribbble",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "fa fa-linkedin",
+                        "image": "",
+                        "title": "",
+                        "paragraph": "",
+                        "list": [],
+                        "linkSources": [],
+                        "footerDescription": "",
+                        "footerButtons": [
+                            {
+                                "icon": "",
+                                "description": ""
+                            }
+                        ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "icon": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

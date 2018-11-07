@@ -1,0 +1,86 @@
+<div id="login" fxLayout="column">
+
+  <div id="login-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+    <div id="login-form">
+
+      <div class="logo">
+        <img src="assets/images/logos/fuse.svg">
+      </div>
+
+      <div class="mat-subheading-2">Hi, do you know a friend or colleague who would enjoy the Brand Institute Panel?
+        Feel free to refer him or her below!
+      </div>
+
+      <form name="loginForm" [formGroup]="loginForm" novalidate>
+
+        <!-- <mat-form-field appearance="outline">
+              <mat-label>Recipient's Title:</mat-label>
+              <mat-select placeholder="Reason for Communication" formControlName="title">
+                <mat-option *ngFor="let contactReason of reasons" [value]="contactReason">
+                  {{contactReason}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="!formErrors.title.required">
+                Select a title is required!
+              </mat-error>
+            </mat-form-field>
+      
+              <mat-form-field appearance="outline">
+                <mat-label>Recipient's First Name:</mat-label>
+                <input matInput formControlName="firstName">
+                <mat-error *ngIf="!formErrors.firstName.required">
+                  A valid First Name is required!
+                </mat-error>
+              </mat-form-field>
+      
+              <mat-form-field appearance="outline">
+                <mat-label>Recipient's Last Name:</mat-label>
+                <input matInput formControlName="lastName">
+                <mat-error *ngIf="!formErrors.lastName.required">
+                  A valid Last Name is required!
+                </mat-error>
+              </mat-form-field> -->
+
+        <mat-form-field appearance="outline">
+          <mat-label>Recipient's Email</mat-label>
+          <input matInput formControlName="email">
+          <mat-error *ngIf="!formErrors.email.required">
+            A valid email is required!
+          </mat-error>
+        </mat-form-field>
+
+        <!-- <mat-form-field appearance="outline">
+                <mat-label>Recipient's Field:</mat-label>
+                <mat-select placeholder="field of porfession" formControlName="field">
+                  <mat-option *ngFor="let filed of fileds" [value]="filed">
+                    {{filed}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="!formErrors.field.required">
+                  Select a reason is required!
+                </mat-error>
+              </mat-form-field> -->
+
+        <mat-form-field appearance="outline">
+          <mat-label>Recipient's Message</mat-label>
+          <textarea rows='3' cols='100' matInput style="height: 190px;" value="Hi, like me, I thought you might enjoy sharing your opinion on products, drugs, services in development. Join the Brand Institute Panel and leave your mark on the future!" autofocus="true" placeholder="Hi, like me, I thought you might enjoy sharing your opinion on products, drugs, services in development. Join the Brand Institute Panel and leave your mark on the future!"
+            formControlName="message"></textarea>
+          <!-- <mat-error *ngIf="!formErrors.message.required">
+            5 characters minimum message is required!
+          </mat-error>-->
+        </mat-form-field> 
+        
+
+        <button mat-raised-button color="accent" (click)="contactUs()" class="submit-button" aria-label="LOG IN"
+          [disabled]="loginForm.invalid">
+          SEND
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
