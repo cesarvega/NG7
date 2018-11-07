@@ -75,6 +75,11 @@ const routes = [
     loadChildren: './login-register/login-register.module#LoginRegisterModule',
     canActivate: [AuthGuard]
   },
+  // {
+  //   path: 'form',
+  //   loadChildren: './dynamic-profile/dynamic-profile.module#DynamicProfileModule',
+  //   // canActivate: [AuthGuard]
+  // },
   {
     path: '**',
     redirectTo: 'items'

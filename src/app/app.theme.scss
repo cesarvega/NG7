@@ -165,8 +165,8 @@ body.theme-yellow-light {
 
 // Define the primary, accent and warn palettes
 $blue-gray-dark-theme-primary-palette: mat-palette($mat-blue);
-$blue-gray-dark-theme-accent-palette: mat-palette($mat-blue-gray);
-$blue-gray-dark-theme-warn-palette: mat-palette($mat-red);
+$blue-gray-dark-theme-accent-palette: mat-palette($mat-purple);
+$blue-gray-dark-theme-warn-palette: mat-palette($mat-yellow);
 
 // Create the Material theme object
 $blue-gray-dark-theme: mat-dark-theme($blue-gray-dark-theme-primary-palette, $blue-gray-dark-theme-accent-palette, $blue-gray-dark-theme-warn-palette);

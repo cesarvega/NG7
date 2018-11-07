@@ -9,16 +9,16 @@
         background: #1A237E;
         background: linear-gradient(to right, #0E2A3B 0%, #34306B 100%);
 
-        // @include media-breakpoint('xs') {
-        //     height: 240px;
-        //     padding: 16px;
-        // }
+        @include media-breakpoint('xs') {
+            height: 240px;
+            padding: 16px;
+        }
 
         .hero-text {
             margin-bottom: 32px;
 
-            // @include media-breakpoint-down('xs') {
-            // }
+            @include media-breakpoint-down('xs') {
+            }
 
             h1 {
                 color: white;
@@ -29,9 +29,9 @@
                 margin-top: 0;
                 margin-bottom: 16px;
 
-                // @include media-breakpoint-down('xs') {
-                //     font-size: 24px;
-                // }
+                @include media-breakpoint-down('xs') {
+                    font-size: 24px;
+                }
             }
 
             h3 {
@@ -42,9 +42,9 @@
                 letter-spacing: 0.075em;
                 margin: 0;
 
-                // @include media-breakpoint-down('xs') {
-                //     font-size: 14px;
-                // }
+                @include media-breakpoint-down('xs') {
+                    font-size: 14px;
+                }
             }
         }
 

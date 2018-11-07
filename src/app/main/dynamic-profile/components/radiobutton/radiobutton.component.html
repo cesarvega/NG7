@@ -1,5 +1,6 @@
-<mat-form-field fxFlex="100" [formGroup]="group">
-    <input matInput [formControlName]="field.name" style="display:none;" [placeholder]="field.label">
+<mat-form-field appearance="outline" fxFlex="100" [formGroup]="group">
+    <mat-label style="padding: 20px;">{{field.label}}</mat-label>
+    <input matInput style="padding: 20px;" [formControlName]="field.name" style="display:none;" [placeholder]="field.label">
     <mat-radio-group [formControlName]="field.name">
         <mat-radio-button class="secondary-text p-24" *ngFor="let item of field.options" [value]="item">{{item}}</mat-radio-button>
     </mat-radio-group>

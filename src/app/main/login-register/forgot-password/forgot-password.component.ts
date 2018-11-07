@@ -39,7 +39,7 @@ export class ForgotPasswordComponent implements OnInit {
 
   retrievePassword(): void {
     console.log('forgot pwd');
-    this.router.navigateByUrl('/apps/login/forgot-password-success');
+    this.router.navigateByUrl('/login/forgot-password-success');
   }
 
   ngOnInit(): void {
