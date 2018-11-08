@@ -15,10 +15,9 @@ import { FaqComponent } from './faq/faq.component';
 import { FaqService } from './faq/faq.service';
 import { AuthGuard } from './service/auth-guard.service';
 import { AuthGuardService } from './service/auth.service';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { TellAFriendComponent } from './tell-a-friend/tell-a-friend.component';
 import { ProfileComponent } from './profile/profile.component';
-import { DynamicProfileModule } from '../dynamic-profile/dynamic-profile.module';
 
 const routes: Routes = [
   {
@@ -29,7 +28,7 @@ const routes: Routes = [
     path: 'contact-us',
     component: ContactUsComponent,
     canActivate: [AuthGuard]
-  },  
+  },
   {
     path: 'change-password',
     component: ChangePasswordComponent,
@@ -48,10 +47,10 @@ const routes: Routes = [
   {
     path: 'faq',
     component: FaqComponent,
-    resolve  : {
+    resolve: {
       faq: FaqService
-  },
-  canActivate: [AuthGuard]
+    },
+    canActivate: [AuthGuard]
   },
   {
     path: 'successful-password-reset',
@@ -75,18 +74,13 @@ const routes: Routes = [
     path: 'tell-a-friend',
     component: TellAFriendComponent
   },
-    {
-    path: 'profile',
-    component: ProfileComponent
-    // canActivate: [AuthGuard]
+  {
+    path: 'users',
+    loadChildren: '../dynamic-profile/dynamic-profile.module#DynamicProfileModule'
   },
   {
-    path: 'register',
-    component: DynamicProfileModule
-}, 
-  {
-      path: '**',
-      redirectTo: 'tell-a-friend'
+    path: '**',
+    redirectTo: 'tell-a-friend'
   }
 ];
 
@@ -105,7 +99,7 @@ const routes: Routes = [
     FuseSharedModule,
   ],
   declarations: [
-    LoginRegisterComponent,    
+    LoginRegisterComponent,
     DialogContent,
     ContactUsComponent,
     ForgotPasswordComponent,
@@ -116,11 +110,10 @@ const routes: Routes = [
     SuccessfulPasswordResetComponent,
     ForgotPasswordThankyouComponent,
     FaqComponent,
-    TellAFriendComponent,
-    DynamicProfileModule
-  ], 
-  providers   : [
-      FaqService, AuthGuard, AuthGuardService
+    TellAFriendComponent
+  ],
+  providers: [
+    FaqService, AuthGuard, AuthGuardService
   ], entryComponents: [DialogContent]
 })
 export class LoginRegisterModule { }

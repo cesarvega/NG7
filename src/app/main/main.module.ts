@@ -52,10 +52,10 @@ const routes = [
     path: 'subscription',
     component: SubscriptionComponent
   },
-  {
-    path: 'items',
-    loadChildren: './items/items.module#ItemsModule'
-  },
+  // {
+  //   path: 'items',
+  //   loadChildren: './items/items.module#ItemsModule'
+  // },
   {
     path: 'login',
     loadChildren: './login-register/login-register.module#LoginRegisterModule'
@@ -71,9 +71,19 @@ const routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'items',
+    loadChildren: './surveys/surveys.module#SurveysModule',
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'faq',
     loadChildren: './login-register/login-register.module#LoginRegisterModule',
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'calendar',
+    loadChildren: './calendar/calendar.module#CalendarModule',
+    // canActivate: [AuthGuard]
   },
   // {
   //   path: 'form',
@@ -101,9 +111,9 @@ const routes = [
     PaymentModule,
     ScheduleModule,
     SubscriptionModule
-  ], 
-  providers   : [
-      AuthGuard, AuthGuardService
-  ], 
+  ],
+  providers: [
+    AuthGuard, AuthGuardService
+  ],
 })
 export class MainModule { }

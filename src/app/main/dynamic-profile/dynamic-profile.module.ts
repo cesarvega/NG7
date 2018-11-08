@@ -20,7 +20,7 @@ import { ProfileComponent } from '../login-register/profile/profile.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 const routes: Routes = [
   {
-    path     : 'user/profile',
+    path     : 'profile',
       component: ProfileComponent
   },
   {

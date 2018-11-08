@@ -1,4 +1,4 @@
-<mat-form-field  fxFlex="100" [formGroup]="group">
+<mat-form-field  appearance="outline" fxFlex="100" [formGroup]="group">
     <input matInput [matDatepicker]="picker"  [min]="'1900-06-15'" [max]="'2000-06-15'"
      [value]="field.value" [formControlName]="field.name"  [placeholder]="field.label">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>

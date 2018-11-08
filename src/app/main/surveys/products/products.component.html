@@ -1,0 +1,160 @@
+<div fxFlexFill>
+
+    <div id="products" class="page-layout carded fullwidth inner-scroll">
+        <!-- HEADER -->
+        <div class="header mat-accent-bg" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-xs="row"
+            fxLayoutAlign.gt-xs="space-between center">
+
+            <!-- APP TITLE -->
+            <div class="logo my-12 m-sm-0" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    assignment
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Surveys
+                </span>
+            </div>
+            <!-- / APP TITLE -->
+
+            <!-- SEARCH -->
+            <div class="search-input-wrapper mx-24 m-md-0" fxFlex="1 0 auto" fxLayout="row" fxLayoutAlign="start center">
+                <label for="search" class="ml-8  pl-10">
+                    <mat-icon class="secondary-text "></mat-icon>
+                </label>
+                <mat-form-field floatLabel="never" fxFlex="1 0 auto">
+                    <input id="search" matInput #filter placeholder="Search">
+                </mat-form-field>
+            </div>
+            <!-- / SEARCH -->
+
+            <!-- <button mat-raised-button
+                    [routerLink]="'new'"
+                    class="add-product-button mat-white-bg my-12 mt-sm-0">
+                <span>ADD NEW PRODUCT</span>
+            </button> -->
+
+        </div>
+        <!-- / HEADER -->
+        <!-- CONTENT CARD -->
+        <div class="content-card mat-white-bg" fxFlex="100">
+
+            <mat-table class="products-table" #table [dataSource]="dataSource" matSort fusePerfectScrollbar>
+                <!-- Name Column -->
+                <ng-container matColumnDef="Survey Name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Survey Name</mat-header-cell>
+                    <mat-cell *matCellDef="let product">
+                        <p class="text-truncate">{{product.surveyName}}</p>
+                    </mat-cell>
+                </ng-container>
+
+                <!-- Category Column -->
+                <ng-container matColumnDef="Survey Started">
+                    <mat-header-cell *matHeaderCellDef fxHide mat-sort-header fxShow.gt-md>Survey Started</mat-header-cell>
+                    <mat-cell *matCellDef="let product" fxHide fxShow.gt-md>
+                        <p class="category text-truncate">
+                            {{product.surveyStarted}}
+                        </p>
+                    </mat-cell>
+                </ng-container>
+
+                <!-- Price Column -->
+                <ng-container matColumnDef="Amount Paid">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header >Amount Paid</mat-header-cell>
+                    <mat-cell *matCellDef="let product" >
+                        <p class="price text-truncate">
+                            {{product.amountPaid | currency:'USD':'symbol'}}
+                        </p>
+                    </mat-cell>
+                </ng-container>
+
+                <!-- Quantity Column -->
+                <ng-container matColumnDef="Payment Status">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header  fxHide fxShow.gt-xs>Payment Status</mat-header-cell>
+                    <mat-cell *matCellDef="let product" fxHide fxShow.gt-xs>
+                        <span *ngIf="product.paymentStatus==='PAID'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: green !important">check</mat-icon>
+                        </span>
+                        <span *ngIf="product.paymentStatus==='In Process'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: green !important">access_time</mat-icon>
+                        </span>
+                        <!-- <span *ngIf="product.paymentStatus==='PAID'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: rgb(201, 172, 12) !important">warning</mat-icon>
+                        </span>
+                        <span *ngIf="product.paymentStatus==='PAID'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: red !important">warning</mat-icon> 
+                        </span>-->
+                        {{product.paymentStatus}}
+                    </mat-cell>                    
+                </ng-container>
+
+                <!-- Active Column -->
+                <ng-container matColumnDef="Survey Status">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header >Survey Status</mat-header-cell>
+                    <mat-cell *matCellDef="let product" >
+                        <span *ngIf="product.surveyStatus.trim() === 'COMPLETED'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: green !important">brightness_1</mat-icon>
+                        </span>
+                        <span *ngIf="product.surveyStatus.trim() === 'CLOSED'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: grey !important">brightness_1</mat-icon>
+                        </span>
+                        <span *ngIf="product.surveyStatus.trim() === 'INCOMPLETE'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: rgb(201, 172, 12) !important">brightness_1</mat-icon>
+                        </span>
+                        <span *ngIf="product.surveyStatus.trim() === 'AVAILABLE'" style="color:whitesmoke" >
+                         <mat-icon class="secondary-text s-24 mat-icon material-icons" role="img" style="color: red !important">brightness_1</mat-icon>
+                        </span>
+                        {{product.surveyStatus}}
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></mat-header-row>
+
+                <mat-row *matRowDef="let product; columns: displayedColumns;" class="product" matRipple>
+                </mat-row>
+
+            </mat-table>
+
+            <mat-paginator #paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="10"
+                [pageSizeOptions]="[5, 10, 25, 100]">
+            </mat-paginator>
+
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center space-between" class="m-8">
+        <!-- Widget 2 -->
+        <div class="widget" fxFlex="100">
+            <div class="fuse-card auto-width mobile" [ngClass.gt-xs]="'mb-10 mr-10 desktop'" style="background: #04b904; color:whitesmoke;">
+                <div class="pb-10" fxLayout="column wrap" fxLayoutAlign="center center">
+                    <div class="h3 pb-10 text-center">Total Surveys Earnings</div>
+                    <div class="font-size-54 font-weight-300 line-height-1 ">
+                        ${{totalAmount}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / Widget 2 -->
+        <!-- Widget 3 -->
+        <div class="widget" fxFlex="100">
+            <div class="fuse-card auto-width mobile" [ngClass.gt-xs]="'mb-10 mr-10 desktop'" style="background: #1E376D; color:whitesmoke;">
+                <div class="pb-10" fxLayout="column wrap" fxLayoutAlign="center center">                
+                        <div class="h3 pb-10">Average per month amount</div>
+                        <div class="font-size-54 font-weight-300 line-height-1 ">
+                            ${{avg}}
+                        </div>                   
+                </div>
+            </div>
+        </div>
+        <!-- / Widget 3 -->
+        <!-- Widget 4 -->
+        <div class="widget" fxFlex="100">
+            <div class="fuse-card auto-width mobile" [ngClass.gt-xs]="'mb-10 mr-10 desktop'" style="background: #42A5F5; color:whitesmoke;">
+                <div class="pb-10" fxLayout="column wrap" fxLayoutAlign="center center">                
+                        <div class="h3 pb-10 text-center">Current Monthly Surveys</div>
+                        <div class="font-size-54 font-weight-300 line-height-1 text-center">
+                            {{totalAmountSurveys}}
+                        </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

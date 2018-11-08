@@ -9,11 +9,53 @@ export const navigation: FuseNavigation[] = [
         children : [
             {
                 id       : 'items',
-                title    : 'items',
+                title    : 'products',
                 translate: 'NAV.SAMPLE.TITLE',
                 type     : 'item',
                 icon     : 'email',
-                url      : '/items',
+                url      : '/items/products',
+                badge    : {
+                    title    : '25',
+                    translate: 'NAV.SAMPLE.BADGE',
+                    bg       : '#F44336',
+                    fg       : '#FFFFFF'
+                }
+            },           
+            {
+                id       : 'orders',
+                title    : 'orders',
+                translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                icon     : 'email',
+                url      : '/items/orders',
+                badge    : {
+                    title    : '25',
+                    translate: 'NAV.SAMPLE.BADGE',
+                    bg       : '#F44336',
+                    fg       : '#FFFFFF'
+                }
+            },
+            {
+                id       : 'profile',
+                title    : 'profile',
+                translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                icon     : 'email',
+                url      : '/login/users/profile',
+                badge    : {
+                    title    : '25',
+                    translate: 'NAV.SAMPLE.BADGE',
+                    bg       : '#F44336',
+                    fg       : '#FFFFFF'
+                }
+            },
+            {
+                id       : 'schedule',
+                title    : 'schedule',
+                translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                icon     : 'email',
+                url      : '/calendar',
                 badge    : {
                     title    : '25',
                     translate: 'NAV.SAMPLE.BADGE',
@@ -36,20 +78,6 @@ export const navigation: FuseNavigation[] = [
                 }
             },
             {
-                id       : 'orders',
-                title    : 'orders',
-                translate: 'NAV.SAMPLE.TITLE',
-                type     : 'item',
-                icon     : 'email',
-                url      : '/orders',
-                badge    : {
-                    title    : '25',
-                    translate: 'NAV.SAMPLE.BADGE',
-                    bg       : '#F44336',
-                    fg       : '#FFFFFF'
-                }
-            },
-            {
                 id       : 'payment',
                 title    : 'payment',
                 translate: 'NAV.SAMPLE.TITLE',
@@ -62,35 +90,7 @@ export const navigation: FuseNavigation[] = [
                     bg       : '#F44336',
                     fg       : '#FFFFFF'
                 }
-            },
-            {
-                id       : 'profile',
-                title    : 'profile',
-                translate: 'NAV.SAMPLE.TITLE',
-                type     : 'item',
-                icon     : 'email',
-                url      : '/profile',
-                badge    : {
-                    title    : '25',
-                    translate: 'NAV.SAMPLE.BADGE',
-                    bg       : '#F44336',
-                    fg       : '#FFFFFF'
-                }
-            },
-            {
-                id       : 'schedule',
-                title    : 'schedule',
-                translate: 'NAV.SAMPLE.TITLE',
-                type     : 'item',
-                icon     : 'email',
-                url      : '/schedule',
-                badge    : {
-                    title    : '25',
-                    translate: 'NAV.SAMPLE.BADGE',
-                    bg       : '#F44336',
-                    fg       : '#FFFFFF'
-                }
-            },
+            },         
             {
                 id       : 'subscription',
                 title    : 'subscription',
