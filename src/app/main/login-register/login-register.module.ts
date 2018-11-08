@@ -18,6 +18,7 @@ import { AuthGuardService } from './service/auth.service';
 import {MatDialogModule} from '@angular/material/dialog';
 import { TellAFriendComponent } from './tell-a-friend/tell-a-friend.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DynamicProfileModule } from '../dynamic-profile/dynamic-profile.module';
 
 const routes: Routes = [
   {
@@ -74,14 +75,14 @@ const routes: Routes = [
     path: 'tell-a-friend',
     component: TellAFriendComponent
   },
-  //   {
-  //   path: 'profile',
-  //   component: ProfileComponent
-  //   // canActivate: [AuthGuard]
-  // },
+    {
+    path: 'profile',
+    component: ProfileComponent
+    // canActivate: [AuthGuard]
+  },
   {
     path: 'register',
-    loadChildren: './dynamic-profile/dynamic-profile.module#DynamicProfileModule'
+    component: DynamicProfileModule
 }, 
   {
       path: '**',
@@ -116,7 +117,7 @@ const routes: Routes = [
     ForgotPasswordThankyouComponent,
     FaqComponent,
     TellAFriendComponent,
-    // ProfileComponent
+    DynamicProfileModule
   ], 
   providers   : [
       FaqService, AuthGuard, AuthGuardService
