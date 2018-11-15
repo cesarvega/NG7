@@ -69,30 +69,30 @@ export class LoginRegisterComponent implements OnInit {
             this.loginForm.value.email = user.email;
             this.loginForm.value.password = user.id;
         }
-        this._biLoginService.signAndRegistrationAuth(this.loginForm.value.email + ',' +  this.loginForm.value.password).subscribe(res => {
-                const userData = JSON.parse(res.d)[0];
-            if (userData.verified) {
-                localStorage.removeItem('user');
-                localStorage.setItem('user', userData.message);
-                const  ocupattion: any = JSON.parse(userData.message);
-                localStorage.setItem('userName', this.loginForm.value.email);
-                ocupattion.forEach(element => {
-                    if (element.question === 'Specify your profession or occupation') {                        
-                        localStorage.setItem('profession', element.answer);
-                    }
-                });
-                if (this._authGuardService.login()) {
-                    this.router.navigateByUrl('/apps/surveys/products');
-                } else {
-                    this._authGuardService.logout();
-                }
-            }else {
-                this.harlemShake = true;
-                this.myTiming = 1;
-                this.isUser = true;
-            }
+        // this._biLoginService.signAndRegistrationAuth(this.loginForm.value.email + ',' +  this.loginForm.value.password).subscribe(res => {
+        //         const userData = JSON.parse(res.d)[0];
+        //     if (userData.verified) {
+        //         localStorage.removeItem('user');
+        //         localStorage.setItem('user', userData.message);
+        //         const  ocupattion: any = JSON.parse(userData.message);
+        //         localStorage.setItem('userName', this.loginForm.value.email);
+        //         ocupattion.forEach(element => {
+        //             if (element.question === 'Specify your profession or occupation') {                        
+        //                 localStorage.setItem('profession', element.answer);
+        //             }
+        //         });
+        //         if (this._authGuardService.login()) {
+        //             this.router.navigateByUrl('/apps/surveys/products');
+        //         } else {
+        //             this._authGuardService.logout();
+        //         }
+        //     }else {
+        //         this.harlemShake = true;
+        //         this.myTiming = 1;
+        //         this.isUser = true;
+        //     }
 
-        });
+        // });
         // this._biLoginService.postUser(this.loginForm.value.email).subscribe(res => {
         // console.log(JSON.parse(res[0].profile));            
         // });

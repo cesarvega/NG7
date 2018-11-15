@@ -46,7 +46,7 @@ export class DynamicFormComponent implements OnInit {
         this.form.controls['Password *'].setErrors({ 'min': true });
       }
       if (this.form.value['Password *'] !== this.form.value['confirm password *']) {
-        this.form.controls['confirm password *'].setErrors({ 'required': true });
+        this.form.controls['confirm password *'].setErrors({ 'required': true }); 
         
       }
       this._biLoginService.verifyEmail(this.form.controls['Email *'].value).subscribe((x: any) => {

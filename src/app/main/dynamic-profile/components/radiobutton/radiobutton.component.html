@@ -1,8 +1,8 @@
 <mat-form-field appearance="outline" fxFlex="100" [formGroup]="group">
-    <mat-label style="padding: 20px;">{{field.label}}</mat-label>
-    <input matInput style="padding: 20px;" [formControlName]="field.name" style="display:none;" [placeholder]="field.label">
+    <mat-label>{{field.label}}</mat-label>
+    <input matInput  [formControlName]="field.name" style="display:none;" [placeholder]="field.label">
     <mat-radio-group [formControlName]="field.name">
-        <mat-radio-button class="secondary-text p-24" *ngFor="let item of field.options" [value]="item">{{item}}</mat-radio-button>
+        <mat-radio-button class="secondary-text p-24 mr-4" *ngFor="let item of field.options" [value]="item">{{item}}</mat-radio-button>
     </mat-radio-group>
     <ng-container *ngFor="let validation of field.validations" ngProjectAs="mat-error">
         <mat-error *ngIf="group.get(field.name).hasError(validation.name)">{{validation.message}}</mat-error>
