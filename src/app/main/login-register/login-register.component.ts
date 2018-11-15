@@ -10,6 +10,8 @@ import { AuthGuardService } from './service/auth.service';
 import {MatDialog} from '@angular/material';
 import { trigger, transition, useAnimation, state, style} from '@angular/animations';
 import { shake } from 'ng-animate';
+import { ToastrService } from 'ngx-toastr';
+import { resultMemoize } from '@ngrx/store';
 
 @Component({
     selector: 'app-login-register',
@@ -28,17 +30,15 @@ import { shake } from 'ng-animate';
 export class LoginRegisterComponent implements OnInit {
     loginForm: FormGroup;
     private user: SocialUser;
-    private loggedIn: boolean;
     public isUser = false;
     public harlemShake = true;
-    private myTiming = 0;
    
     constructor(
         private _fuseConfigService: FuseConfigService,
         private _formBuilder: FormBuilder,
         private _authService: AuthService,
-        private _authGuardService: AuthGuardService,
-        private _biLoginService: LoginService,
+        private toastr: ToastrService,
+        private _LoginService: LoginService,
         public dialog: MatDialog,
         private router: Router
     ) {
@@ -61,57 +61,40 @@ export class LoginRegisterComponent implements OnInit {
         };
     }
 
-
     signInWithBI(user?: SocialUser): void {
         this.harlemShake = false;
-        // console.log(this.loginForm.value);
         if (user) {
             this.loginForm.value.email = user.email;
             this.loginForm.value.password = user.id;
         }
-        // this._biLoginService.signAndRegistrationAuth(this.loginForm.value.email + ',' +  this.loginForm.value.password).subscribe(res => {
-        //         const userData = JSON.parse(res.d)[0];
-        //     if (userData.verified) {
-        //         localStorage.removeItem('user');
-        //         localStorage.setItem('user', userData.message);
-        //         const  ocupattion: any = JSON.parse(userData.message);
-        //         localStorage.setItem('userName', this.loginForm.value.email);
-        //         ocupattion.forEach(element => {
-        //             if (element.question === 'Specify your profession or occupation') {                        
-        //                 localStorage.setItem('profession', element.answer);
-        //             }
-        //         });
-        //         if (this._authGuardService.login()) {
-        //             this.router.navigateByUrl('/apps/surveys/products');
-        //         } else {
-        //             this._authGuardService.logout();
-        //         }
-        //     }else {
-        //         this.harlemShake = true;
-        //         this.myTiming = 1;
-        //         this.isUser = true;
-        //     }
-
-        // });
-        // this._biLoginService.postUser(this.loginForm.value.email).subscribe(res => {
-        // console.log(JSON.parse(res[0].profile));            
-        // });
-
+        this._LoginService.login({ email: this.loginForm.value.email , password: this.loginForm.value.password}).subscribe(res => {
+            console.log(res);
+            localStorage.setItem('token', res.id);
+            this._LoginService.getUser(res.id).subscribe( resul => {
+                localStorage.setItem('user', JSON.stringify(resul));
+                localStorage.setItem('username', resul.username);
+                localStorage.setItem('email', resul.email);
+            });
+            this.router.navigateByUrl('/profile');
+            setTimeout(() => {
+                this.toastr.success('Welcome');   
+            }, 2000);
+        }, err => {
+             console.log(err.error.error);
+             this.harlemShake = true;
+             this.toastr.warning(err.error.error.message + ' username or password incorrect');       
+        });
     }
-
     signInWithGoogle(): void {
         this._authService.signIn(GoogleLoginProvider.PROVIDER_ID).then( user => {
             this.signInWithBI(user);
         });
     }
-
     signInWithFB(): void {
         this._authService.signIn(FacebookLoginProvider.PROVIDER_ID).then( user => {
             this.signInWithBI(user);
         });
     }
-
-
     openDialog(): void {
         const dialogRef = this.dialog.open(DialogContent);
     
@@ -119,16 +102,12 @@ export class LoginRegisterComponent implements OnInit {
           console.log(`Dialog result: ${result}`);
         });
       }
-
     ngOnInit(): void {        
         this.loginForm = this._formBuilder.group({
             email: ['', [Validators.required, Validators.email]],
             password: ['', Validators.required]
         });
-
-        // this.setFullScreen(true);
     }
-    
 }
 
 @Component({

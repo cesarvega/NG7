@@ -47,41 +47,30 @@ export class DynamicFormComponent implements OnInit {
       }
       if (this.form.value['Password *'] !== this.form.value['confirm password *']) {
         this.form.controls['confirm password *'].setErrors({ 'required': true }); 
-        
-      }
-      this._biLoginService.verifyEmail(this.form.controls['Email *'].value).subscribe((x: any) => {
-        // if (true) {
-        if (!JSON.parse(x.d)[0].verified) {
-          this.emailTaken.emit('the email ' + this.form.controls['Email *'].value + ' is already taken');
+      }else{
+        if (this.form.valid) {     
           this.noValid = true;
-          return true;
+          this.submitForm.emit(this.form.getRawValue());
+          this.validateAllFormFields(this.form);
         }
-        else {
-          if (this.form.valid) {
-            this.submitForm.emit(this.form.getRawValue());
-          } else {
-            this.noValid = true;
-            this.validateAllFormFields(this.form);
-          }
-        }
-      });
-    }
-    else {
-      if (this.form.valid) {
-        if (this.form.value['Select preferred payment method *'] === 'PayPal') {
-          this.paypal.emit('Please double-check and confirm that your PayPal account email is spelled correctly');
-          if (this.form.value['Enter your PayPal account'].length === 0) {
-            this.paypal.emit('Please enter a valid account');
-            return;
-          }
-        }
-        this.submitForm.emit(this.form.getRawValue());
-      } else {
-        this.noValid = true;
-        this.validateAllFormFields(this.form);
       }
+      // this._biLoginService.verifyEmail(this.form.controls['Email *'].value).subscribe((x: any) => {
+      //   // if (true) {
+      //   if (!JSON.parse(x.d)[0].verified) {
+      //     this.emailTaken.emit('the email ' + this.form.controls['Email *'].value + ' is already taken');
+      //     this.noValid = true;
+      //     return true;
+      //   }
+      //   else {
+      //     if (this.form.valid) {
+      //       this.submitForm.emit(this.form.getRawValue());
+      //     } else {
+      //       this.noValid = true;
+      //       this.validateAllFormFields(this.form);
+      //     }
+      //   }
+      // });
     }
-
   }
 
   createControl(): FormGroup {

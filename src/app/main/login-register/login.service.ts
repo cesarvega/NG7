@@ -15,6 +15,7 @@ export class LoginService {
   private _SP_verifyUserEmail = '[BI_MEMBERS].[dbo].[pm_verify_username] ';
   private _SP_getSurveySummary = '[BI_MEMBERS].[dbo].[pm_getSummary] ';
   protected API_URL = 'https://tools.brandinstitute.com/BIWebServices/' + 'api/BiFormCreator/';
+  protected API_URL_LOOPBACK = 'https://nodeappcesar.herokuapp.com/api';
 
   protected ASMX_URL_UpdateProfile = 'https://tools.brandinstitute.com/wsPanelMembers/wsPanel.asmx/pm_updProfile';
   protected ASMX_URL_VerifyUserName = 'https://tools.brandinstitute.com/wsPanelMembers/wsPanel.asmx/pm_verify_username';
@@ -23,16 +24,26 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  // get  all Users 
-  getUsers(): Observable<any> {
-    return this.httpClient.get(`${this.API_URL}`);
+
+ // LOGIN USER
+
+  login(user: any): Observable<any> {
+    const url = `${this.API_URL_LOOPBACK}` + '/Users/login';
+    return this.httpClient.post(url, user, this.httpOptions);
   }
 
+  
   // get User by id
-  getUser(id: string): Observable<any> {
-    const url = `${this.API_URL}/edit/${id}`;
+  getUser(token: string): Observable<any> {
+    const url = `${this.API_URL_LOOPBACK}/Users/me?access_token=${token}`;
     return this.httpClient.get(url);
   }
+
+  // get  all Users 
+  getUsers(): Observable<any> {
+    return this.httpClient.get(`${this.API_URL_LOOPBACK}`);
+  }
+
 
   // register un nuevo User 
   getSurveySummary(username: string): Observable<any> {

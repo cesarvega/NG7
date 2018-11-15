@@ -25,6 +25,9 @@ export class ToolbarComponent implements OnInit, OnDestroy
     navigation: any;
     selectedLanguage: any;
     userStatusOptions: any[];
+    username: any = localStorage.getItem('username');
+    email: any = localStorage.getItem('email');
+    logo: any = 'assets/images/logos/fuse.svg';
 
     // Private
     private _unsubscribeAll: Subject<any>;

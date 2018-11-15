@@ -9,6 +9,7 @@ import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { ToastrService, Toast } from 'ngx-toastr';
+import { AuthGuardService } from '../service/auth.service';
 
 @Component({
   selector: 'app-registration-form',
@@ -25,6 +26,30 @@ export class RegistrationFormComponent implements OnInit {
   error;
  
   P_info_1: FieldConfig2[] = [
+    {
+      labelValue: 'Username *',
+      icon: '',
+      defaultInputValue: '',
+      componentType: 'false',
+      options: [''],
+      disabled: 'false',
+      componentId: '0',
+      sortOrder: '0',
+      tooltip: '',
+      placeHolder: 'Enter your Username',
+      type: 'input',
+      label: 'Username *',
+      name: 'Username *',
+      value: '',
+      inputType: 'text',
+      validations: [
+        {
+          name: 'required',
+          validator: Validators.required,
+          message: 'please enter Username'
+        }
+      ]
+    },
     {
       labelValue: 'Email *',
       icon: '',
@@ -437,11 +462,10 @@ export class RegistrationFormComponent implements OnInit {
   constructor(
     private _fuseConfigService: FuseConfigService,
     private _authService: AuthService,
-    private _loginService: LoginService,
-    private _route: Router,
     public dialog: MatDialog,
     private toastr: ToastrService,
-    private _RegistrationFormService: RegistrationFormService
+    private _RegistrationFormService: RegistrationFormService,
+    private router: Router
   ) {
     // Configure the layout
     this._fuseConfigService.config = {
@@ -480,19 +504,31 @@ export class RegistrationFormComponent implements OnInit {
       console.log(result);
     });
 
-    const user = {
-      'username': event['Email *'],
-      'fullname': event['FirstName *'] + ' ' + event['LastName *'],
-      'password': event['Password *'],
-      'role': 'client',
-      'active': true
+
+    const user =  {
+      'realm': 'client',
+      'username':  event['Username *'],
+      'fullname': event['First name *'] + ' ' + event['Last name *'],
+      'email':  event['Email *'],
+      'emailVerified':  false,
+      'password':  event['Password *']
     };
-   
 
-    this._RegistrationFormService.postFromField(user).subscribe(result => {
-      console.log(result);
-
-    });
+    this._RegistrationFormService.createNewUser(user).subscribe(
+      (data: any) => {
+        this.data = data;
+        localStorage.setItem('user', data );
+        this.toastr.success('the user is registered please login');   
+        setTimeout(() => {          
+          this.router.navigateByUrl('/login/auth/login');  
+        }, 2000);    
+      },
+      (err) => {
+        if (err.error.error.name === 'ValidationError') {
+          // this.toastr.success(err.error.error.message);
+          this.toastr.warning('the username or email is already taken');
+        }
+      });
   }
 
   signInWithGoogle(): void {
@@ -514,8 +550,8 @@ export class RegistrationFormComponent implements OnInit {
   }
 
   setFieldsWithSocialMedia(user): void {
-    this.fieldOBJ[0].item[0].value = user.email;
-    this.fieldOBJ[0].item[3].value = user.firstName;
+    this.fieldOBJ[0].item[1].value = user.email;
+    this.fieldOBJ[0].item[4].value = user.firstName;
     this.fieldOBJ[0].item[5].value = user.lastName;
   }
 
@@ -527,26 +563,6 @@ export class RegistrationFormComponent implements OnInit {
    * On init
    */
   ngOnInit(): void {
-    const user =  {
-      'realm': 'admin',
-      'username': 'cvega',
-      'email': 'cvega@gmail.com',
-      'emailVerified': true,
-      'password': '123123'
-    };
-
-   
-    this._RegistrationFormService.createNewUser(user) .subscribe(
-      (data) => {
-        this.data = data;
-      },
-      (err) => {
-        if (err.error.error.name === 'ValidationError') {
-          setTimeout(() => { this.toastr.success(err.error.error.message); });
-        }
-      });
-
-      setTimeout(() => this.toastr.success('supsupsupsupsupsupsupsupsupsupsupsupsupsupsupsupsupsup'));
     localStorage.setItem('user', '');
     this._authService.authState.subscribe((user) => {
       this.user = user;
