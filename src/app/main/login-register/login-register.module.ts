@@ -59,8 +59,7 @@ const routes: Routes = [
   },
   {
     path: 'forgot-password',
-    component: ForgotPasswordComponent,
-    canActivate: [AuthGuard]
+    component: ForgotPasswordComponent
   },
   {
     path: 'forgot-password-success',

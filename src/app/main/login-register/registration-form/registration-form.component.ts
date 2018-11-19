@@ -511,7 +511,7 @@ export class RegistrationFormComponent implements OnInit {
       'fullname': event['First name *'] + ' ' + event['Last name *'],
       'email':  event['Email *'],
       'emailVerified':  false,
-      'password':  event['Password *']
+      'password':  event['Password *'].toLowerCase()
     };
 
     this._RegistrationFormService.createNewUser(user).subscribe(

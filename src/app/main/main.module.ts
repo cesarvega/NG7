@@ -30,27 +30,33 @@ const routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'inventory',
-    component: InventoryComponent
+    component: InventoryComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'orders',
-    component: OrdersComponent
+    component: OrdersComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'payment',
-    component: PaymentComponent
+    component: PaymentComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'schedule',
-    component: ScheduleComponent
+    component: ScheduleComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'subscription',
-    component: SubscriptionComponent
+    component: SubscriptionComponent,
+    canActivate: [AuthGuard]
   },
   // {
   //   path: 'items',
@@ -58,7 +64,8 @@ const routes = [
   // },
   {
     path: 'login',
-    loadChildren: './login-register/login-register.module#LoginRegisterModule'
+    loadChildren: './login-register/login-register.module#LoginRegisterModule',
+    // canActivate: [AuthGuard]
   },
   {
     path: 'change-password',
@@ -83,7 +90,7 @@ const routes = [
   {
     path: 'calendar',
     loadChildren: './calendar/calendar.module#CalendarModule',
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   // {
   //   path: 'form',
