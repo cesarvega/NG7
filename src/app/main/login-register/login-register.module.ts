@@ -17,7 +17,6 @@ import { AuthGuard } from './service/auth-guard.service';
 import { AuthGuardService } from './service/auth.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TellAFriendComponent } from './tell-a-friend/tell-a-friend.component';
-import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {

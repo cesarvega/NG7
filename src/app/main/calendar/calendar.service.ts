@@ -8,6 +8,7 @@ export class CalendarService implements Resolve<any>
 {
     events: any;
     onEventsUpdated: Subject<any>;
+    protected API_URL_LOOPBACK = 'https://nodeappcesar.herokuapp.com';
 
     /**
      * Constructor
@@ -55,15 +56,23 @@ export class CalendarService implements Resolve<any>
     getEvents(): Promise<any>
     {
         return new Promise((resolve, reject) => {
-
-            this._httpClient.get('api/calendar/events')
+            const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
+            this._httpClient.get(url)
                 .subscribe((response: any) => {
-                    this.events = response.data;
+                    this.events = response;
                     this.onEventsUpdated.next(this.events);
+                //    console.log(JSON.stringify(this.events));                    
                     resolve(this.events);
                 }, reject);
         });
     }
+
+
+      // get User by id
+  getUser(token: string): Observable<any> {
+    const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
+    return this._httpClient.get(url);
+  }
 
     /**
      * Update events
@@ -73,11 +82,13 @@ export class CalendarService implements Resolve<any>
      */
     updateEvents(events): Promise<any>
     {
+        const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
+        // let data = {
+        //     id  : 'events',
+        //     data: [...events]
+        // };
         return new Promise((resolve, reject) => {
-            this._httpClient.post('api/calendar/events', {
-                id  : 'events',
-                data: [...events]
-            })
+            this._httpClient.post(url, JSON.stringify(events))
                 .subscribe((response: any) => {
                     this.getEvents();
                 }, reject);
