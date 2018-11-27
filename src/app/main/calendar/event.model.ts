@@ -3,6 +3,7 @@ import { startOfDay, endOfDay } from 'date-fns';
 
 export class CalendarEventModel
 {
+    id?: string;
     start: Date;
     end?: Date;
     title: string;
@@ -30,6 +31,7 @@ export class CalendarEventModel
      */
     constructor(data?)
     {
+        this.id = data.id;
         data = data || {};
         this.start = new Date(data.start) || startOfDay(new Date());
         this.end = new Date(data.end) || endOfDay(new Date());
