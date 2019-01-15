@@ -74,7 +74,7 @@ export class CalendarService implements Resolve<any>
      */
     updateEvents(events): Promise<any>
     {
-      const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
+      // const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
         return new Promise((resolve, reject) => {
         //     this._httpClient.post(url, {
         //         id  : 'events',

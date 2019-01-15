@@ -69,13 +69,14 @@
 
                 <mat-form-field appearance="outline" class="pl-sm-8 no-errors-spacer" fxFlex="50">
                     <mat-label>Start time</mat-label>
-                    <input matInput type="time">
+                    <input matInput  name="startTime" formControlName="startTime" type="time">
                 </mat-form-field>
 
             </div>
 
-            <div fxFlex="1 0 auto" fxLayout="column" fxLayout.gt-xs="row">
 
+
+            <div fxFlex="1 0 auto" fxLayout="column" fxLayout.gt-xs="row">
                 <mat-form-field appearance="outline" class="pr-sm-8" fxFlex="50">
                     <mat-label>End date</mat-label>
                     <input matInput [matDatepicker]="endDatePicker" name="end" formControlName="end">
@@ -85,10 +86,12 @@
 
                 <mat-form-field appearance="outline" class="pl-sm-8 no-errors-spacer" fxFlex="50">
                     <mat-label>End time</mat-label>
-                    <input matInput type="time">
+                    <input matInput name="endTime" formControlName="endTime" type="time">
                 </mat-form-field>
 
             </div>
+
+
 
             <mat-form-field appearance="outline" formGroupName="meta" class="w-100-p">
                 <mat-label>Location</mat-label>

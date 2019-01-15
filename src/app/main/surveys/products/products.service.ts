@@ -19,7 +19,7 @@ export class EcommerceProductsService implements Resolve<any>
 
 
     products: any[];
-    now = true;
+    now = false;
     webApiUrl = 'https://ng6-node-app-boldepvhqf.now.sh/';
     apiCall = 'api/bi-surveys';
     API_URL = 'https://tools.brandinstitute.com/BIWebServices/' + 'api/BiFormCreator/';

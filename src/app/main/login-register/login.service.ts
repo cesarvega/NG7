@@ -10,9 +10,7 @@ export class LoginService {
       'Content-Type': 'application/json'
     })
   };
-  private SP_verifyUser = '[BI_MEMBERS].[dbo].[pm_verify_username_and_password] ';
-  private _SP_saveUserProfile = '[BI_MEMBERS].[dbo].[pm_updProfile] ';
-  private _SP_verifyUserEmail = '[BI_MEMBERS].[dbo].[pm_verify_username] ';
+  
   private _SP_getSurveySummary = '[BI_MEMBERS].[dbo].[pm_getSummary] ';
   protected API_URL = 'https://tools.brandinstitute.com/BIWebServices/' + 'api/BiFormCreator/';
   protected API_URL_LOOPBACK = 'https://nodeappcesar.herokuapp.com/api';

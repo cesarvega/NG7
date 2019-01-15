@@ -156,8 +156,11 @@ export class CalendarComponent implements OnInit {
     eventTimesChanged({ event, newStart, newEnd }: CalendarEventTimesChangedEvent): void {
         event.start = newStart;
         event.end = newEnd;
-        // console.warn('Dropped or resized', event);
-        this.refresh.next(true);
+        const eventIndex =  this.getIndexAt(event);   
+        this._calendarService.updateCalendarEvent(event, this.currentid).subscribe( updatedEvent => {            
+            this.events[eventIndex] = Object.assign(this.events[eventIndex], event);
+            this.refresh.next(true);
+        });
     }
 
     /**
@@ -197,7 +200,7 @@ export class CalendarComponent implements OnInit {
      */
     editEvent(action: string, event: CalendarEvent): void {
         // const eventIndex = this.events.indexOf(event);
-        const eventIndex =  this.getIndexAt(event);        
+         
         this.dialogRef = this._matDialog.open(CalendarEventFormDialogComponent, {
             panelClass: 'event-form-dialog',
             data: {
@@ -218,6 +221,7 @@ export class CalendarComponent implements OnInit {
                      * Save
                      */
                     case 'save':
+                    const eventIndex =  this.getIndexAt(event);     
                     this._calendarService.updateCalendarEvent( formData.getRawValue(), this.currentid).subscribe( updatedEvent => {            
                         this.events[eventIndex] = Object.assign(this.events[eventIndex], formData.getRawValue());
                         this.refresh.next(true);
