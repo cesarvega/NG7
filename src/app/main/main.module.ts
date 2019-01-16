@@ -58,10 +58,10 @@ const routes = [
     component: SubscriptionComponent,
     canActivate: [AuthGuard]
   },
-  // {
-  //   path: 'items',
-  //   loadChildren: './items/items.module#ItemsModule'
-  // },
+  {
+    path: 'items',
+    loadChildren: './items/items.module#ItemsModule'
+  },
   {
     path: 'login',
     loadChildren: './login-register/login-register.module#LoginRegisterModule',
