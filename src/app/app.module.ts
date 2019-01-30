@@ -22,9 +22,11 @@ import { LayoutModule } from 'app/layout/layout.module';
 import { APP_BASE_HREF } from '../../node_modules/@angular/common';
 import { LoginOpt, SocialLoginModule, AuthServiceConfig } from 'angularx-social-login';
 import { GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider } from 'angularx-social-login';
-
+import { environment } from '../environments/environment';
 import { ToastrModule } from 'ngx-toastr';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 const providers = {
     'google': {
         'clientId': '602575723314-jdm4nunt3bl3kts5pt422dkfoecdqi70.apps.googleusercontent.com'
@@ -110,7 +112,11 @@ const appRoutes: Routes = [
         SocialLoginModule,
         LayoutModule,
         AppStoreModule,
-        MainModule
+        MainModule,
+
+        // firebase
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule
     ],
     bootstrap: [
         AppComponent
