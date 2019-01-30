@@ -25,6 +25,7 @@ import { GoogleLoginProvider, FacebookLoginProvider, LinkedInLoginProvider } fro
 import { environment } from '../environments/environment';
 import { ToastrModule } from 'ngx-toastr';
 
+import { FirestoreSettingsToken } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 const providers = {
@@ -123,7 +124,7 @@ const appRoutes: Routes = [
     ],
     // providers: [{ provide: APP_BASE_HREF, useValue: '/corporate/'}, 
     providers: [{ provide: APP_BASE_HREF, useValue: '/ng7/' },
-    { provide: AuthServiceConfig, useFactory: provideConfig }
+    { provide: AuthServiceConfig, useFactory: provideConfig }, { provide: FirestoreSettingsToken, useValue: {} }
     ]
 })
 export class AppModule {

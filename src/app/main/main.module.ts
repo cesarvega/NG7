@@ -99,7 +99,7 @@ const routes = [
   // },
   {
     path: '**',
-    redirectTo: 'items'
+    redirectTo: 'calendar'
   }
 ];
 
