@@ -92,6 +92,20 @@ export const navigation: FuseNavigation[] = [
                 }
             },         
             {
+                id       : 'jeff',
+                title    : 'jeff',
+                // translate: 'NAV.SAMPLE.TITLE',
+                type     : 'item',
+                // icon     : 'email',
+                url      : '/jeff',
+                badge    : {
+                    title    : '25',
+                    translate: 'NAV.SAMPLE.BADGE',
+                    bg       : '#F44336',
+                    fg       : '#FFFFFF'
+                }
+            },         
+            {
                 id       : 'subscription',
                 title    : 'subscription',
                 translate: 'NAV.SAMPLE.TITLE',
