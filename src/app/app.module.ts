@@ -122,7 +122,8 @@ const appRoutes: Routes = [
         AppComponent
     ],
     // providers: [{ provide: APP_BASE_HREF, useValue: '/corporate/'}, 
-    providers: [{ provide: APP_BASE_HREF, useValue: '/ng7/' },
+    providers: [
+        // { provide: APP_BASE_HREF, useValue: '/ng7/' },
     { provide: AuthServiceConfig, useFactory: provideConfig }
     ]
 })

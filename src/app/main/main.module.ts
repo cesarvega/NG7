@@ -92,6 +92,11 @@ const routes = [
     loadChildren: './calendar/calendar.module#CalendarModule',
     canActivate: [AuthGuard]
   },
+  {
+    path: 'jeff',// dejemos este como para que tu hagas pruebas ok le voya a poner un link se hace asi
+    loadChildren: './mimodulo/jeff-modulo.module#JeffModuloModule',
+    canActivate: [AuthGuard]
+  },  
   // {
   //   path: 'form',
   //   loadChildren: './dynamic-profile/dynamic-profile.module#DynamicProfileModule',
