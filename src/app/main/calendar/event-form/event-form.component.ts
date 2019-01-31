@@ -69,7 +69,7 @@ export class CalendarEventFormDialogComponent
             title : new FormControl(this.event.title),
             start : new FormControl(this.event.start),
             end   : new FormControl(this.event.end),
-            endTime   : new FormControl('13:01'),
+            endTime   : new FormControl(this.event.end),// esto deberia porvenir del evento asi 
             //startTime   : new FormControl(this.event.startTime),
             
             //time  : new FormControl(this.event.time),

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-jeff-component',
@@ -12,4 +13,16 @@ export class JeffComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+}
+
+export class ProfileEditorComponent {
+  profileForm = new FormGroup({
+    Form: new FormGroup({
+    name: new FormControl(''),
+    address: new FormControl(''),
+    city: new FormControl(''),
+    })
+  });
+ 
+  constructor(private fb: FormBuilder) { }
 }
