@@ -13,6 +13,7 @@ import { FuseConfirmDialogModule } from '@fuse/components';
 import { CalendarComponent } from './calendar.component';
 import { CalendarService } from './calendar.service';
 import { CalendarEventFormDialogComponent } from './event-form/event-form.component';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 const routes: Routes = [
     {
@@ -53,7 +54,9 @@ const routes: Routes = [
         FuseConfirmDialogModule
     ],
     providers      : [
-        CalendarService
+        CalendarService,
+        AngularFirestore
+        
     ],
     entryComponents: [
         CalendarEventFormDialogComponent

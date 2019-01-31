@@ -70,9 +70,9 @@ export class CalendarEventFormDialogComponent
             start : new FormControl(this.event.start),
             end   : new FormControl(this.event.end),
             endTime   : new FormControl('13:01'),
-            //startTime   : new FormControl(this.event.startTime),
+            // startTime   : new FormControl(this.event.startTime),
             
-            //time  : new FormControl(this.event.time),
+            // time  : new FormControl(this.event.time),
             allDay: new FormControl(this.event.allDay),
             color : this._formBuilder.group({
                 primary  : new FormControl(this.event.color.primary),
