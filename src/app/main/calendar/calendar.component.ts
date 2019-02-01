@@ -285,6 +285,13 @@ export class CalendarComponent implements OnInit {
                 var myMomentStart = moment(newEvent.start.toString()).add(minutes, 'minutes').format();
                 console.log(myMomentEnd);
                 console.log(myMomentStart);
+
+                var startdate= moment(myMomentStart).format("YYYY-MM-DD");
+                var starthour= moment(myMomentStart).format("hh:mm");
+                var enddate= moment(myMomentEnd).format("YYYY-MM-DD");
+                var endhour= moment(myMomentEnd).format("hh:mm");
+
+
                 this._calendarService.createCalendarEvent(newEvent).subscribe(createdevent => {
                     newEvent.actions = this.actions;
                     this.events.push(newEvent);
