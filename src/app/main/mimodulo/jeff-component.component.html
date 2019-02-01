@@ -1,3 +1,26 @@
 <p>
-  jeff-component works!
+  <!–– 
+  jeff-component works!!!
+  ––>
 </p>
+
+<div formGroupName="Form" class="center">
+  <h3>Form</h3>
+
+  <label>
+    Name:
+    <input type="text" formControlName="Name">
+  </label>
+  <br>
+  <label>
+    City:
+    <input type="text" formControlName="City">
+  </label>
+  <br>
+  <label>
+    Address:
+    <input type="text" formControlName="Address">
+  </label>
+  <br>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</div>

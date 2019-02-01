@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material';
@@ -12,12 +13,18 @@ import { CalendarService } from './calendar.service';
 import { CalendarEventModel } from './event.model';
 import { CalendarEventFormDialogComponent } from './event-form/event-form.component';
 
+
+import { AngularFirestore } from '@angular/fire/firestore';
+// import {Moment} from 'moment/moment';
+import * as moment from 'moment';
+
 @Component({
     selector: 'calendar',
     templateUrl: './calendar.component.html',
     styleUrls: ['./calendar.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations: fuseAnimations
+    animations: fuseAnimations,
+     providers: [AngularFirestore,  {provide: 'moment', useValue: moment }]
 })
 export class CalendarComponent implements OnInit {
     actions: CalendarEventAction[];
@@ -30,10 +37,13 @@ export class CalendarComponent implements OnInit {
     view: string;
     viewDate: Date;
     currentid;
+    now;
 
+    
     constructor(
         private _matDialog: MatDialog,
-        private _calendarService: CalendarService
+        private _calendarService: CalendarService,
+        private db: AngularFirestore,
     ) {
         // Set the defaults
         this.view = 'month';
@@ -83,6 +93,16 @@ export class CalendarComponent implements OnInit {
             this.setEvents();
             this.refresh.next();
         });
+
+        this.db.collection('events').get().subscribe((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data()}`);
+                console.dir(doc.data());
+            });
+        });
+        this.now = moment().format();
+        let myMoment = moment("10/26/1980");
+
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -257,6 +277,21 @@ export class CalendarComponent implements OnInit {
                     return;
                 }
                 const newEvent = response.getRawValue();
+                var durationInMinutes = newEvent.endTime.split(':'); 
+                var minutes = (+durationInMinutes[0]) * 60 + (+durationInMinutes[1]);
+                var myMomentEnd = moment(newEvent.end.toString()).add(minutes, 'minutes').format();
+                durationInMinutes = newEvent.startTime.split(':'); 
+                minutes = (+durationInMinutes[0]) * 60 + (+durationInMinutes[1]);
+                var myMomentStart = moment(newEvent.start.toString()).add(minutes, 'minutes').format();
+                console.log(myMomentEnd);
+                console.log(myMomentStart);
+
+                var startdate= moment(myMomentStart).format("YYYY-MM-DD");
+                var starthour= moment(myMomentStart).format("hh:mm");
+                var enddate= moment(myMomentEnd).format("YYYY-MM-DD");
+                var endhour= moment(myMomentEnd).format("hh:mm");
+
+
                 this._calendarService.createCalendarEvent(newEvent).subscribe(createdevent => {
                     newEvent.actions = this.actions;
                     this.events.push(newEvent);
