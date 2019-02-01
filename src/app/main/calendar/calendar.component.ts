@@ -10,7 +10,7 @@ import { FuseConfirmDialogComponent } from '@fuse/components/confirm-dialog/conf
 import { fuseAnimations } from '@fuse/animations';
 
 import { CalendarService } from './calendar.service';
-import { CalendarEventModel } from './event.model';
+import { CalendarEventModel } from './event-form/event.model';
 import { CalendarEventFormDialogComponent } from './event-form/event-form.component';
 
 
@@ -66,23 +66,10 @@ export class CalendarComponent implements OnInit {
             }
         ];
 
-        /**
-         * Get events from service/server
-         */
         this.setEvents();
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Lifecycle hooks
-    // -----------------------------------------------------------------------------------------------------
-
-    /**
-     * On init
-     */
     ngOnInit(): void {
-        /**
-         * Watch re-render-refresh for updating db
-         */
         this.refresh.subscribe(updateDB => {
             if (updateDB) {
                 this._calendarService.updateEvents(this.events);
@@ -100,18 +87,9 @@ export class CalendarComponent implements OnInit {
                 console.dir(doc.data());
             });
         });
-        this.now = moment().format();
-        let myMoment = moment("10/26/1980");
-
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Public methods
-    // -----------------------------------------------------------------------------------------------------
 
-    /**
-     * Set events
-     */
     setEvents(): void {
         this.events = this._calendarService.events.map(item => {
             item.actions = this.actions;
@@ -119,12 +97,7 @@ export class CalendarComponent implements OnInit {
         });
     }
 
-    /**
-     * Before View Renderer
-     *
-     * @param {any} header
-     * @param {any} body
-     */
+
     beforeMonthViewRender({ header, body }): void {
         /**
          * Get the selected day
@@ -143,11 +116,7 @@ export class CalendarComponent implements OnInit {
 
     }
 
-    /**
-     * Day clicked
-     *
-     * @param {MonthViewDay} day
-     */
+
     dayClicked(day: CalendarMonthViewDay): void {
         const date: Date = day.date;
         const events: CalendarEvent[] = day.events;
@@ -165,14 +134,7 @@ export class CalendarComponent implements OnInit {
         this.refresh.next();
     }
 
-    /**
-     * Event times changed
-     * Event dropped or resized
-     *
-     * @param {CalendarEvent} event
-     * @param {Date} newStart
-     * @param {Date} newEnd
-     */
+  
     eventTimesChanged({ event, newStart, newEnd }: CalendarEventTimesChangedEvent): void {
         event.start = newStart;
         event.end = newEnd;
@@ -183,11 +145,7 @@ export class CalendarComponent implements OnInit {
         });
     }
 
-    /**
-     * Delete Event
-     *
-     * @param event
-     */
+
     deleteEvent(event): void {
         this.confirmDialogRef = this._matDialog.open(FuseConfirmDialogComponent, {
             disableClose: false
@@ -210,14 +168,6 @@ export class CalendarComponent implements OnInit {
 
     }
 
- 
-
-    /**
-     * Edit Event
-     *
-     * @param {string} action
-     * @param {CalendarEvent} event
-     */
     editEvent(action: string, event: CalendarEvent): void {
         // const eventIndex = this.events.indexOf(event);
          
@@ -277,19 +227,19 @@ export class CalendarComponent implements OnInit {
                     return;
                 }
                 const newEvent = response.getRawValue();
-                var durationInMinutes = newEvent.endTime.split(':'); 
-                var minutes = (+durationInMinutes[0]) * 60 + (+durationInMinutes[1]);
-                var myMomentEnd = moment(newEvent.end.toString()).add(minutes, 'minutes').format();
+                let durationInMinutes = newEvent.endTime.split(':'); 
+                let minutes = (+durationInMinutes[0]) * 60 + (+durationInMinutes[1]);
+                const myMomentEnd = moment(newEvent.end.toString()).add(minutes, 'minutes').format();
                 durationInMinutes = newEvent.startTime.split(':'); 
                 minutes = (+durationInMinutes[0]) * 60 + (+durationInMinutes[1]);
-                var myMomentStart = moment(newEvent.start.toString()).add(minutes, 'minutes').format();
+                const myMomentStart = moment(newEvent.start.toString()).add(minutes, 'minutes').format();
                 console.log(myMomentEnd);
                 console.log(myMomentStart);
 
-                var startdate= moment(myMomentStart).format("YYYY-MM-DD");
-                var starthour= moment(myMomentStart).format("hh:mm");
-                var enddate= moment(myMomentEnd).format("YYYY-MM-DD");
-                var endhour= moment(myMomentEnd).format("hh:mm");
+                const startdate = moment(myMomentStart).format('YYYY-MM-DD');
+                const starthour = moment(myMomentStart).format('hh:mm');
+                const enddate = moment(myMomentEnd).format('YYYY-MM-DD');
+                const endhour = moment(myMomentEnd).format('hh:mm');
 
 
                 this._calendarService.createCalendarEvent(newEvent).subscribe(createdevent => {

@@ -6,8 +6,8 @@ export class CalendarEventModel
     id?: string;
     start: Date;
     end?: Date;
-    startTime: Date;
-    endTime?: Date;
+    startTime: string;
+    endTime?: string;
     title: string;
     color: {
         primary: string;
@@ -36,9 +36,9 @@ export class CalendarEventModel
         this.id = data.id;
         data = data || {};
         this.start = new Date(data.start) || startOfDay(new Date());
+        this.startTime = data.startTime || '07:00';
         this.end = new Date(data.end) || endOfDay(new Date());
-        this.startTime = new Date(data.startTime) || startOfDay(new Date());
-        this.endTime = new Date(data.endTime) || startOfDay(new Date());
+        this.endTime = data.endTime || '09:30';
         this.title = data.title || '';
         this.color = {
             primary  : data.color && data.color.primary || '#1e90ff',

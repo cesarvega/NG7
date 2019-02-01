@@ -4,8 +4,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { CalendarEvent } from 'angular-calendar';
 
 import { MatColors } from '@fuse/mat-colors';
-
-import { CalendarEventModel } from '../event.model';
+import { CalendarEventModel } from './event.model';
 
 @Component({
     selector     : 'calendar-event-form-dialog',
@@ -17,18 +16,11 @@ import { CalendarEventModel } from '../event.model';
 export class CalendarEventFormDialogComponent
 {
     action: string;
-    event: CalendarEvent;
+    event: CalendarEventModel;
     eventForm: FormGroup;
     dialogTitle: string;
     presetColors = MatColors.presets;
 
-    /**
-     * Constructor
-     *
-     * @param {MatDialogRef<CalendarEventFormDialogComponent>} matDialogRef
-     * @param _data
-     * @param {FormBuilder} _formBuilder
-     */
     constructor(
         public matDialogRef: MatDialogRef<CalendarEventFormDialogComponent>,
         @Inject(MAT_DIALOG_DATA) private _data: any,
@@ -47,33 +39,24 @@ export class CalendarEventFormDialogComponent
             this.dialogTitle = 'New Event';
             this.event = new CalendarEventModel({
                 start: _data.date,
-                end  : _data.date
+                startTime: '07:00',
+                end: _data.date,
+                endTime: '10:00'
             });
         }
 
         this.eventForm = this.createEventForm();
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Public methods
-    // -----------------------------------------------------------------------------------------------------
-
-    /**
-     * Create the event form
-     *
-     * @returns {FormGroup}
-     */
+   
     createEventForm(): FormGroup
     {
         return new FormGroup({
             title : new FormControl(this.event.title),
             start : new FormControl(this.event.start),
-            startTime   : new FormControl(this.event.start),
+            startTime   : new FormControl(this.event.startTime),
             end   : new FormControl(this.event.end),
-            endTime   : new FormControl(this.event.end),// esto deberia porvenir del evento asi 
-            //startTime   : new FormControl(this.event.startTime),
-            
-            // time  : new FormControl(this.event.time),
+            endTime   : new FormControl(this.event.endTime),
             allDay: new FormControl(this.event.allDay),
             color : this._formBuilder.group({
                 primary  : new FormControl(this.event.color.primary),
