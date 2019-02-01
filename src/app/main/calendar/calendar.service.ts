@@ -50,36 +50,14 @@ export class CalendarService implements Resolve<any>
         });
     }
 
-    /**
-     * Get events
-     *
-     * @returns {Promise<any>}
-     */
     getEvents(): Promise<any> {
-        // this.db.collection('events').get().subscribe((querySnapshot) => {
-        //     querySnapshot.forEach((doc) => {
-        //         console.log(`${doc.id} => ${doc.data()}`);
-        //         console.dir(doc.data());
-        //         this.list.push(doc.data());
-        //     });
-        //     this.events = this.list;
-        // });
-
         return new Promise((resolve, reject) => {
-            //   const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
-            //     this._httpClient.get(url)
-            //         .subscribe((response: any) => {
-            //             this.events = response;
-            //             console.log( this.events);
-            //             this.onEventsUpdated.next(this.events);
-            //             resolve(this.events);
-            //         }, reject);
             this.db.collection('events').get().subscribe((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     console.log(`${doc.id} => ${doc.data()}`);
                     console.dir(doc.data());
                     this.list.push(doc.data());
-                });
+                }, reject);
                 this.events = this.list;
                 console.log(this.events);
                 this.onEventsUpdated.next(this.events);
@@ -88,15 +66,12 @@ export class CalendarService implements Resolve<any>
         });
     }
 
-    /**
-     * Update events
-     *
-     * @param events
-     * @returns {Promise<any>}
-     */
+  
     updateEvents(events): Promise<any> {
         // const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
         return new Promise((resolve, reject) => {
+            // for each
+            // this.db.collection('events').add({});
             //     this._httpClient.post(url, {
             //         id  : 'events',
             //         data: [...events]
