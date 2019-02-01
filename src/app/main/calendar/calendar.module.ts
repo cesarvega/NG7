@@ -13,6 +13,8 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { CalendarComponent } from './calendar.component';
 import { CalendarService } from './calendar.service';
 import { CalendarEventFormDialogComponent } from './event-form/event-form.component';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 const routes: Routes = [
     {
         path     : '**',
@@ -53,7 +55,9 @@ const routes: Routes = [
         MatMomentDateModule
     ],
     providers      : [
-        CalendarService
+        CalendarService,
+        AngularFirestore
+        
     ],
     entryComponents: [
         CalendarEventFormDialogComponent

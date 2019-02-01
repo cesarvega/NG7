@@ -4,11 +4,13 @@ import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/r
 import { Observable, Subject } from 'rxjs';
 import { CalendarEvent } from 'calendar-utils';
 
+import { AngularFirestore } from '@angular/fire/firestore';
 @Injectable()
 export class CalendarService implements Resolve<any>
 {
     events: any;
     onEventsUpdated: Subject<any>;
+    list: any[] = [];
     protected API_URL_LOOPBACK = 'https://nodeappcesar.herokuapp.com';
     /**
      * Constructor
@@ -16,9 +18,10 @@ export class CalendarService implements Resolve<any>
      * @param {HttpClient} _httpClient
      */
     constructor(
-        private _httpClient: HttpClient
-    )
-    {
+        private _httpClient: HttpClient,
+        private db: AngularFirestore
+
+    ) {
         // Set the defaults
         this.onEventsUpdated = new Subject();
     }
@@ -34,8 +37,7 @@ export class CalendarService implements Resolve<any>
      * @param {RouterStateSnapshot} state
      * @returns {Observable<any> | Promise<any> | any}
      */
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any
-    {
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> | any {
         return new Promise((resolve, reject) => {
             Promise.all([
                 this.getEvents()
@@ -53,16 +55,36 @@ export class CalendarService implements Resolve<any>
      *
      * @returns {Promise<any>}
      */
-    getEvents(): Promise<any>
-    {
+    getEvents(): Promise<any> {
+        // this.db.collection('events').get().subscribe((querySnapshot) => {
+        //     querySnapshot.forEach((doc) => {
+        //         console.log(`${doc.id} => ${doc.data()}`);
+        //         console.dir(doc.data());
+        //         this.list.push(doc.data());
+        //     });
+        //     this.events = this.list;
+        // });
+
         return new Promise((resolve, reject) => {
-          const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
-            this._httpClient.get(url)
-                .subscribe((response: any) => {
-                    this.events = response;
-                    this.onEventsUpdated.next(this.events);
-                    resolve(this.events);
-                }, reject);
+            //   const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
+            //     this._httpClient.get(url)
+            //         .subscribe((response: any) => {
+            //             this.events = response;
+            //             console.log( this.events);
+            //             this.onEventsUpdated.next(this.events);
+            //             resolve(this.events);
+            //         }, reject);
+            this.db.collection('events').get().subscribe((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    console.log(`${doc.id} => ${doc.data()}`);
+                    console.dir(doc.data());
+                    this.list.push(doc.data());
+                });
+                this.events = this.list;
+                console.log(this.events);
+                this.onEventsUpdated.next(this.events);
+                resolve(this.events);
+            });
         });
     }
 
@@ -72,32 +94,31 @@ export class CalendarService implements Resolve<any>
      * @param events
      * @returns {Promise<any>}
      */
-    updateEvents(events): Promise<any>
-    {
-      // const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
+    updateEvents(events): Promise<any> {
+        // const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
         return new Promise((resolve, reject) => {
-        //     this._httpClient.post(url, {
-        //         id  : 'events',
-        //         data: [...events]
-        //     })
-        //         .subscribe((response: any) => {
-        //             this.getEvents();
-        //         }, reject);
-        this.getEvents();
+            //     this._httpClient.post(url, {
+            //         id  : 'events',
+            //         data: [...events]
+            //     })
+            //         .subscribe((response: any) => {
+            //             this.getEvents();
+            //         }, reject);
+            this.getEvents();
         });
     }
 
 
     createCalendarEvent(event: CalendarEvent): Observable<any> {
-      const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
-      return this._httpClient.post(url, event);
+        const url = `${this.API_URL_LOOPBACK}/api/calendar-events`;
+        return this._httpClient.post(url, event);
     }
     deleteCalendarEvent(event: CalendarEvent): Observable<any> {
-      const url = `${this.API_URL_LOOPBACK}/api/calendar-events/` + event.id;
-      return this._httpClient.delete(url);
+        const url = `${this.API_URL_LOOPBACK}/api/calendar-events/` + event.id;
+        return this._httpClient.delete(url);
     }
     updateCalendarEvent(event: CalendarEvent, id: string): Observable<any> {
-      const url = `${this.API_URL_LOOPBACK}/api/calendar-events/` + id;
-      return this._httpClient.put(url, event);
+        const url = `${this.API_URL_LOOPBACK}/api/calendar-events/` + id;
+        return this._httpClient.put(url, event);
     }
 }

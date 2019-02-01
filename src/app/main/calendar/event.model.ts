@@ -37,7 +37,7 @@ export class CalendarEventModel
         data = data || {};
         this.start = new Date(data.start) || startOfDay(new Date());
         this.end = new Date(data.end) || endOfDay(new Date());
-        this.startTime = new Date(data.startTime) || endOfDay(new Date());
+        this.startTime = new Date(data.startTime) || startOfDay(new Date());
         this.endTime = new Date(data.endTime) || startOfDay(new Date());
         this.title = data.title || '';
         this.color = {

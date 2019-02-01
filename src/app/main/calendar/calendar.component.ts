@@ -279,8 +279,12 @@ export class CalendarComponent implements OnInit {
                 const newEvent = response.getRawValue();
                 var durationInMinutes = newEvent.endTime.split(':'); 
                 var minutes = (+durationInMinutes[0]) * 60 + (+durationInMinutes[1]);
-                var myMoment = moment(newEvent.end.toString()).add(minutes, 'minutes').format();
-                console.log(myMoment);
+                var myMomentEnd = moment(newEvent.end.toString()).add(minutes, 'minutes').format();
+                durationInMinutes = newEvent.startTime.split(':'); 
+                minutes = (+durationInMinutes[0]) * 60 + (+durationInMinutes[1]);
+                var myMomentStart = moment(newEvent.start.toString()).add(minutes, 'minutes').format();
+                console.log(myMomentEnd);
+                console.log(myMomentStart);
                 this._calendarService.createCalendarEvent(newEvent).subscribe(createdevent => {
                     newEvent.actions = this.actions;
                     this.events.push(newEvent);
